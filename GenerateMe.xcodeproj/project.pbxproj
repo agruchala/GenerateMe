@@ -17,6 +17,8 @@
 		FA8F985628738494002B1E42 /* GenerateMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F985528738494002B1E42 /* GenerateMeUITests.swift */; };
 		FA8F985828738494002B1E42 /* GenerateMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F985728738494002B1E42 /* GenerateMeUITestsLaunchTests.swift */; };
 		FA8F9865287386C5002B1E42 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8F9864287386C5002B1E42 /* Colors.xcassets */; };
+		FA8F986A287390DD002B1E42 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F9868287390DD002B1E42 /* Colors.swift */; };
+		FA8F986C28739118002B1E42 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F986B28739118002B1E42 /* Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		FA8F985528738494002B1E42 /* GenerateMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMeUITests.swift; sourceTree = "<group>"; };
 		FA8F985728738494002B1E42 /* GenerateMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FA8F9864287386C5002B1E42 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FA8F9868287390DD002B1E42 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FA8F986B28739118002B1E42 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		FA8F983328738492002B1E42 /* GenerateMe */ = {
 			isa = PBXGroup;
 			children = (
+				FA8F9866287390DD002B1E42 /* Generated */,
 				FA8F983428738492002B1E42 /* AppDelegate.swift */,
 				FA8F983628738492002B1E42 /* SceneDelegate.swift */,
 				FA8F983828738492002B1E42 /* ViewController.swift */,
@@ -130,6 +135,15 @@
 			path = GenerateMeUITests;
 			sourceTree = "<group>";
 		};
+		FA8F9866287390DD002B1E42 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FA8F986B28739118002B1E42 /* Storyboard.swift */,
+				FA8F9868287390DD002B1E42 /* Colors.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +151,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA8F985B28738494002B1E42 /* Build configuration list for PBXNativeTarget "GenerateMe" */;
 			buildPhases = (
+				FA8FB7872874D0C600FA150A /* SwiftGen */,
 				FA8F982D28738492002B1E42 /* Sources */,
 				FA8F982E28738492002B1E42 /* Frameworks */,
 				FA8F982F28738492002B1E42 /* Resources */,
@@ -257,12 +272,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FA8FB7872874D0C600FA150A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/swiftgen/bin/swiftgen\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA8F982D28738492002B1E42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FA8F983928738492002B1E42 /* ViewController.swift in Sources */,
+				FA8F986C28739118002B1E42 /* Storyboard.swift in Sources */,
+				FA8F986A287390DD002B1E42 /* Colors.swift in Sources */,
 				FA8F983528738492002B1E42 /* AppDelegate.swift in Sources */,
 				FA8F983728738492002B1E42 /* SceneDelegate.swift in Sources */,
 			);

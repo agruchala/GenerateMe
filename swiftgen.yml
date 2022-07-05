@@ -1,0 +1,14 @@
+input_dir: GenerateMe
+output_dir: GenerateMe/Generated/
+xcassets:
+  - inputs:
+      - Colors.xcassets
+    outputs:
+      - templatePath: Templates/colors.stencil
+        output: Colors.swift
+ib:
+  - inputs:
+    - Base.lproj/Main.storyboard
+    outputs:
+      templateName: scenes-swift5
+      output: Storyboard.swift

@@ -1,0 +1,16 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+import UIKit.UIColor
+
+typealias Color = UIColor
+
+// MARK: - Colors
+
+extension Color {
+  {% for color in catalogs.first.assets %}
+    static let {{color.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Color(named: "{{ color.name }}")!
+  {% endfor %}
+}
+
+// swiftlint:enable all
